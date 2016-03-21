@@ -1,3 +1,4 @@
+require 'pry'
 describe FakeHashWrapper do
   describe '#[]()' do
     it 'allows you to set values in the hash' do
@@ -8,8 +9,10 @@ describe FakeHashWrapper do
 
     it 'returns values regardless of whether they are strings or symbols' do
       fake = FakeHashWrapper.new
+
       fake[:blake] = 'the best'
       fake['anisha'] = 'awesome'
+
       expect(fake['blake']).to eq('the best')
       expect(fake[:anisha]).to eq('awesome')
     end
