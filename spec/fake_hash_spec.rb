@@ -45,11 +45,11 @@ describe FakeHashWrapper do
       fall_television[:nbc] = "Selfie"
       fall_television[:amc] = "Walking Dead"
       fall_television[:cbs] = "Scorpion"
-      
+
       expect($stdout).to receive(:puts).with("Selfie")
       expect($stdout).to receive(:puts).with("Walking Dead")
       expect($stdout).to receive(:puts).with("Scorpion")
-      
+
       fall_television.each do |k,v|
         puts v
       end
